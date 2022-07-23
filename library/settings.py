@@ -135,3 +135,9 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # Configure Django App for Heroku
 django_on_heroku.settings(locals())
 del DATABASES['default']['OPTIONS']['sslmode']
+
+AUTH_USER_MODEL = 'books.User'
+
+ACCOUNT_ACTIVATION_DAYS = 7
+REGISTRATION_AUTO_LOGIN = True
+LOGIN_REDIRECT_URL = "/"
